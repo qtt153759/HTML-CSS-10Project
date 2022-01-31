@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+/* class container trong nav, content và ul của footer */
+
+.container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    /* width=1000px rất hay dùng */
+    width: 1000px;
+}
+header {
+    background-image: url("./peter-broomfield-m3m-lnR90uM-unsplash\ 1.jpg");
+    /* fit screen: size cover để vừa màn hình, position center center để vào chính giữa*/
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    /* Lúc nào cx min-height để ảnh còng kéo xuống */
+    min-height: calc(100vh - 102px);
+}
+.content {
+    font-size: 2rem;
+    margin: auto;
+    max-width: 100%;
+}
+.content h1 {
+    color: #00c2ff;
+    margin-bottom: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+nav .logo {
+    /* 1 rem=16px */
+    font-size: 2rem;
+}
+nav ul {
+    /* Cái này ms ăn đc vào ul này, nav trên chỉ là chung các content trong nav thôi */
+    display: flex;
+    /* Cho mất dấu */
+    list-style-type: none;
+    padding: 0;
+}
+nav li a {
+    color: white;
+    padding: 1rem;
+    /* Xóa dấu gạch chân dưới li */
+    text-decoration: none;
+}
+.selected {
+    font-weight: bold;
+}
+.highlight {
+    background-color: #00c2ff;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    /* align-item là theo chiều dọc, justify-content là chiều ngang */
+    /* align-item chỉnh kích thướng item,(ít dùng) align-content chỉ chỉnh vị trí của item */
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+footer strong {
+    color: #00c2ff;
+}
+footer p {
+    margin: 0;
+}
+/* set css cho màm hình nhỏ */
+@media screen and (max-width: 700px) {
+    .content {
+        font-size: 1.2rem;
+        /* 3 tham số: 1.top  2.(l-r)  3.bottom */
+        margin: 2rem auto 0;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    /* Cách viết loại bỏ phần không mong muốn */
+    nav li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    /* Phải viết cách ra, không được nav.highlight */
+    nav .highlight {
+        /* Ẩn luôn */
+        display: none;
+    }
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer li {
+        margin: 1rem;
+        text-align: center;
+    }
+}

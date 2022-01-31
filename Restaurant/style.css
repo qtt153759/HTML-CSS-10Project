@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+header {
+    background-image: url(bg.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.container {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 1000px;
+    max-width: 100%;
+}
+.pre-nav {
+    font: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    padding: 0.5rem 0;
+}
+.logo {
+    color: #026e78;
+    font-weight: bold;
+    font-size: 2rem;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    /* flex-wrap tự động xuống dòng */
+    flex-wrap: wrap;
+}
+nav li {
+    /* flex-grow : 1;    ➜ The div will grow in same proportion as the window-size, flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size ,flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for, e.g:- if 3 divs are in the wrapper then each div will take 33% */
+    /* ncl flex: auto cho an toàn */
+    flex: auto;
+}
+nav li a {
+    background-color: #2d99a4;
+    /* div là block, span là inline, inline-block cũng giống inline được cái là đc set height và width */
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+nav a.active {
+    background-color: #fff;
+    color: #026e78;
+    font-weight: bold;
+}
+nav a.highlight {
+    background-color: #026e78;
+    color: #fff;
+}
+/* hover thường opacity thì đẹp hơn */
+nav a:hover {
+    opacity: 0.8;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin-top: 5rem;
+    /* align-items: flex-start là cho tất cả lệch phải */
+    align-items: flex-start;
+}
+.content h1 {
+    font-weight: 200;
+    background-color: #026e78;
+    color: white;
+    padding: 1rem;
+    display: inline-block;
+}
+.white-link {
+    background-color: #fff;
+    color: #026e78;
+    padding: 1rem;
+}
+.teal-link {
+    background-color: #026e78;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .pre-nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav {
+    }
+    .content {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: black;
+    /* ăn vào thẻ p */
+    color: white;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+nav {
+    border-bottom: 5px solid white;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+}
+button {
+    background-color: #fff;
+    border: 0;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+}
+.logo {
+    font-size: 2.5rem;
+}
+.logo i {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    padding: 1rem;
+    /* Không có cách nào để flex: 0 1 auto thôi thì width:33.33% */
+    width: 33.33%;
+    font-size: 2rem;
+    text-align: center;
+}
+.col img {
+    /* thế này thì height cx nhỏ lại theo tỷ lệ */
+    max-width: 100%;
+}
+/* combo chèn hiệu ứng huyền thoại */
+/* B1:tạo div bọc ngoài, B2:set div cha position:relative, B3: set div con position, absolute */
+.img-container {
+    position: relative;
+}
+
+.img-container i {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    opacity: 0.6;
+}
+.green {
+    color: #00d69f;
+}
+.red {
+    color: #e75050;
+}
+.orange {
+    color: #d27752;
+}
+@media screen and (max-width: 700px) {
+    .col {
+        width: 100%;
+    }
+    nav button {
+        display: none;
+    }
+    nav {
+        justify-content: center;
+    }
+}
