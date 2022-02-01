@@ -12,6 +12,7 @@ body {
 /* class container trong nav, content và ul của footer */
 
 .container {
+    /* rem là đơn vị của root parent tương tự %, vh vw là viewport */
     padding: 1rem;
     margin: 0 auto;
     max-width: 100%;
